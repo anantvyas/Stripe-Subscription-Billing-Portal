@@ -48,5 +48,7 @@
   "main": "postcss.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  
+  "proxy": "https://stripe-subscription-billing-portal-2710.onrender.com"
 }
