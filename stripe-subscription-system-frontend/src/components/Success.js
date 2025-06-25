@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
+import  BASE_URL  from '../xcos'; // Adjust the import path as necessary
 function Success() {
   const [loading, setLoading] = useState(true);
 

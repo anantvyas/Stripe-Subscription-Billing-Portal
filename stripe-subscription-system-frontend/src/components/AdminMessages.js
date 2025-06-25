@@ -1,7 +1,7 @@
 // src/components/AdminMessages.js
 
 import React, { useEffect, useState } from 'react';
-import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
+import  BASE_URL  from '../xcos'; // Adjust the import path as necessary
 function AdminMessages() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);

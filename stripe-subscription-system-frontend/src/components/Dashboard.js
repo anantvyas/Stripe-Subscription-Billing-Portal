@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Spinner from './Spinner';
-import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
+import  BASE_URL  from '../xcos'; // Adjust the import path as necessary
 const BASIC_PRICE_ID = process.env.REACT_APP_BASIC_PRICE_ID;
 const PRO_PRICE_ID = process.env.REACT_APP_PRO_PRICE_ID;
 

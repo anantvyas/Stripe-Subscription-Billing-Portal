@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Spinner from './Spinner';
 //import base url for API requests
-import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
+import  BASE_URL  from '../xcos'; // Adjust the import path as necessary
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
 function AdminDashboard() {

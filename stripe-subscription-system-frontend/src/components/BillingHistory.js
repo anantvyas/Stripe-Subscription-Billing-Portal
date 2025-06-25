@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Spinner from './Spinner';
-import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
+import  BASE_URL  from '../xcos'; // Adjust the import path as necessary
 function BillingHistory() {
   const [invoices, setInvoices] = useState([]);
   const [loading, setLoading] = useState(true);
