@@ -1,0 +1,4 @@
+# Ignore environment files
+.env
+stripe-subscription-system-backend/.env
+stripe-subscription-system-frontend/.env
