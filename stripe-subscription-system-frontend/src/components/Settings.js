@@ -1,5 +1,5 @@
 import React from 'react';
-
+import BASE_URL from '../xcos';
 function Settings() {
   const user = JSON.parse(localStorage.getItem('user'));
 
@@ -11,7 +11,7 @@ function Settings() {
     if (!confirmed) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/delete/${user.id}`, {
+      const response = await fetch(`${BASE_URL}/api/auth/delete/${user.id}`, {
         method: 'DELETE',
       });
 

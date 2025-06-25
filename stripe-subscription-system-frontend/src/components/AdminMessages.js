@@ -1,7 +1,7 @@
 // src/components/AdminMessages.js
 
 import React, { useEffect, useState } from 'react';
-
+import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
 function AdminMessages() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,7 +13,7 @@ function AdminMessages() {
 
   async function fetchMessages() {
     try {
-      const res = await fetch('http://localhost:5000/api/admin/messages/all', {
+      const res = await fetch(`${BASE_URL}/api/admin/messages/all`, {
         headers: {
           Authorization: `Bearer ${adminToken}`,
         },
@@ -29,7 +29,7 @@ function AdminMessages() {
 
   async function markAsRead(id) {
     try {
-      await fetch(`http://localhost:5000/api/admin/messages/mark-read/${id}`, {
+      await fetch(`${BASE_URL}/api/admin/messages/mark-read/${id}`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${adminToken}`,

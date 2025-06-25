@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
 function Success() {
   const [loading, setLoading] = useState(true);
 
@@ -18,7 +18,7 @@ function Success() {
 
   async function fetchUser(userId) {
     try {
-      const res = await fetch(`http://localhost:5000/api/auth/me/${userId}`);
+      const res = await fetch(`${BASE_URL}/api/auth/me/${userId}`);
       const data = await res.json();
 
       if (res.ok) {

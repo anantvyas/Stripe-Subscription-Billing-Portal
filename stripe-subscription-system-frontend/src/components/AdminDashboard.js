@@ -1,6 +1,8 @@
 // src/components/AdminDashboard.js
 import React, { useEffect, useState } from 'react';
 import Spinner from './Spinner';
+//import base url for API requests
+import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
 function AdminDashboard() {
@@ -9,7 +11,7 @@ function AdminDashboard() {
   const [revenueData, setRevenueData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/admin/dashboard-data')
+    fetch(`${BASE_URL}/api/admin/dashboard-data`)
       .then(res => res.json())
       .then(data => setStats(data))
       .catch(err => console.error('Error fetching dashboard data:', err));

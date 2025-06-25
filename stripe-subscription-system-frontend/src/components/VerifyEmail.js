@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import BASE_URL from '../xcos';
 function VerifyEmail() {
   const { token } = useParams();
   const [status, setStatus] = useState('verifying');
@@ -13,7 +14,7 @@ function VerifyEmail() {
       if (isCalled) return; // prevent second call
 
       try {
-        const res = await fetch(`http://localhost:5000/api/auth/verify-email/${token}`);
+        const res = await fetch(`${BASE_URL}/api/auth/verify-email/${token}`);
         const data = await res.json();
 
         if (res.ok) {

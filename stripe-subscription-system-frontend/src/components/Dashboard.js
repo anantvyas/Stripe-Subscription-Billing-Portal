@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Spinner from './Spinner';
-
+import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
 const BASIC_PRICE_ID = process.env.REACT_APP_BASIC_PRICE_ID;
 const PRO_PRICE_ID = process.env.REACT_APP_PRO_PRICE_ID;
 
@@ -23,7 +23,7 @@ function Dashboard() {
 
   async function fetchUser(userId) {
     try {
-      const res = await fetch(`http://localhost:5000/api/auth/me/${userId}`);
+      const res = await fetch(`${BASE_URL}/api/auth/me/${userId}`);
       const data = await res.json();
 
       if (res.ok) {
@@ -49,7 +49,7 @@ function Dashboard() {
 
   async function fetchInvoiceCount(email) {
     try {
-      const res = await fetch('http://localhost:5000/api/billing-history', {
+      const res = await fetch(`${BASE_URL}/api/billing-history`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
@@ -164,7 +164,7 @@ function Dashboard() {
   async function handleCheckout(priceId) {
     console.log('sending priceId:', priceId);
     try {
-      const response = await fetch('http://localhost:5000/api/checkout/create-checkout-session', {
+      const response = await fetch(`${BASE_URL}/api/checkout/create-checkout-session`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

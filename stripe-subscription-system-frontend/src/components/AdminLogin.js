@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
 function AdminLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -9,7 +9,7 @@ function AdminLogin() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/api/admin/login', {
+      const response = await fetch(`${BASE_URL}/api/admin/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

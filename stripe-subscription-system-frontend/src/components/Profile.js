@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Spinner from './Spinner';
-
+import { BASE_URL } from '../xcos'; // Adjust the import path as necessary
 function Profile() {
   const [user, setUser] = useState(null);
   const [name, setName] = useState('');
@@ -21,7 +21,7 @@ function Profile() {
   async function fetchUser(userId) {
     if (!userId) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/auth/me/${userId}`);
+      const res = await fetch(`${BASE_URL}/api/auth/me/${userId}`);
       const data = await res.json();
 
       if (res.ok) {
@@ -46,7 +46,7 @@ function Profile() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/update-profile', {
+      const response = await fetch(`${BASE_URL}/api/auth/update-profile`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
