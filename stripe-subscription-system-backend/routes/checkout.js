@@ -32,8 +32,8 @@ router.post('/create-checkout-session', async (req, res) => {
           quantity: 1,
         },
       ],
-      success_url: `${process.env.FRONTEND_URL}/success`,
-      cancel_url: `${process.env.FRONTEND_URL}/cancel`,
+      success_url: `${process.env.FRONTEND_URL}success`,
+      cancel_url: `${process.env.FRONTEND_URL}cancel`,
       metadata: {
         userId: user._id.toString(),
       },
