@@ -14,7 +14,7 @@ A modern, production-ready *full-stack subscription billing platform* built with
 
 ![image](https://github.com/user-attachments/assets/bde5f1e7-82ef-4d6d-bf4e-6542d5fa3f0f)
 
-> (Replace with actual screenshots if available)
+
 
 ---
 
