@@ -6,7 +6,12 @@ const cors = require('cors');
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL,
+  credentials: true,  
+}));
+
+app.use(cookieParser());
 
 // ✅ FIRST — Load webhook FIRST with raw body BEFORE express.json()
 const webhookHandler = require('./webhooks/webhook');
