@@ -10,8 +10,8 @@ A modern, production-ready *full-stack subscription billing platform* built with
 
 ## 📸 Preview
 
-![User Dashboard](https://via.placeholder.com/1000x500?text=User+Dashboard+Screenshot)
-![Admin Analytics](https://via.placeholder.com/1000x500?text=Admin+Panel+Analytics+Screenshot)
+![image](https://github.com/user-attachments/assets/d42b3e4b-dcdc-4bff-9c52-82286b2a9a2d)
+
 ![image](https://github.com/user-attachments/assets/bde5f1e7-82ef-4d6d-bf4e-6542d5fa3f0f)
 
 > (Replace with actual screenshots if available)
@@ -52,4 +52,4 @@ A modern, production-ready *full-stack subscription billing platform* built with
 
 ---
 
-## ⚙ Project Structure
+
